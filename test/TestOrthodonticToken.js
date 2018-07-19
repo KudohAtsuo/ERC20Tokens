@@ -78,6 +78,8 @@ contract("OrthodonticToken", function(accounts) {
   });
 
   // now let's check 'transferFrom'
+  // notice: This function allows spender to withdraw from tokenoner's account.
+  // So, in curly brackets account from is spender's account.
   it("should be subtracted from accounts[0]", function() {
     return OrthodonticToken.deployed().then(function(instance) {
       var myContract = instance;
